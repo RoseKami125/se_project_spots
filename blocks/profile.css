@@ -20,15 +20,19 @@
 .profile__edit-button{
   margin-top: auto;
   border: none;
-  padding:0 0 20px;
   background-color: transparent;
-  color: rgba(33, 33, 33, 0.4);
+  color: rgb(33, 33, 33);
+  opacity: 0.4;
   text-align: start;
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
   display: flex;
   gap: 8px;
+}
+
+.profile__edit-button:hover{
+  cursor: pointer;
 }
 
 .profile__post-button{
@@ -48,6 +52,10 @@
   gap: 8px;
   align-items: center;
   justify-content: center;
+}
+
+.profile__post-button:hover{
+  cursor: pointer;
 }
 
 .profile__name{
@@ -83,6 +91,7 @@
     max-width: 288px;
     align-items: center;
     text-align: center;
+    padding-top: 20px;
   }
    .profile__avatar{
     margin-right: 0;
@@ -114,8 +123,5 @@
    .profile__post-button{
     margin: 0;
     width: 100%;
-    height: 88px;
-    background-color: #212121;
-    color: #fcf5e5;
    }
 }
