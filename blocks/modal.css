@@ -1,7 +1,7 @@
 .modal{
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  transition: visibility 0.5s ease, opacity 0.5s ease;
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
@@ -36,9 +36,11 @@
   position: absolute;
   top: 32px;
   right: 50px;
-  left: 640px;
-  bottom: 336px;
   background-image: url(../images/close-button.png);
+}
+
+.modal__close-button:hover{
+  cursor: pointer;
 }
 
 .modal__form{
@@ -59,7 +61,6 @@
 
 .modal__input{
   display: block;
-  gap: 8px;
   width: 100%;
   height: 52px;
   margin: 8px 0 0;
@@ -96,6 +97,7 @@
   .modal__container{
     margin: 134px 10px;
     max-width: 300px;
+    box-sizing: border-box;
   }
 
   .modal__title{
@@ -126,14 +128,10 @@
 
   .modal__input::placeholder{
     font-size: 16px;
-    font-weight: 500;
-    line-height: 1;
   }
 
   .modal__label{
     font-size: 16px;
-    font-weight: 500;
-    line-height: 1;
   }
 
   .modal__submit-button{
