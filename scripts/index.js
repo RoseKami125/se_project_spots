@@ -73,6 +73,7 @@ function handleAddCardSubmit(evt){
   });
   cardsList.prepend(cardEl);
   closeModal(newPostModal);
+  newPostForm.reset();
 }
 
 function getCardElement(data){
