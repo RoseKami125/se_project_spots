@@ -148,7 +148,6 @@ opacity: 0.5;
   color: white;
   background-color: #212121;
   max-width: fit-content;
-  height: 32px;
   border-radius: 8px;
   font-weight: 500;
   font-size: 20px;
@@ -161,7 +160,6 @@ opacity: 0.5;
   .modal__title{
     margin-bottom: 24px;
     max-width: 276px;
-    height: 20px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1;

@@ -50,21 +50,22 @@ const previewModalCloseBtn = previewModal.querySelector(".modal__close-button");
 const previewImage = previewModal.querySelector(".modal__image");
 const previewCaption = previewModal.querySelector(".modal__caption");
 
-function escapeModal(event){
-   document.addEventListener("keydown", (event) => {
-    if (event.key === `Escape`){
-      modalElement.classList.remove("modal_is-opened");
-    }
-   });
+function handleEscape(evt){
+   if (evt.key === 'Escape'){
+    const opened = document.querySelector(".modal_is-opened");
+    if(opened) {
+      closeModal(opened);}
+   }
   }
 
 function openModal(modalElement){
   modalElement.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscape);
 }
 
 function closeModal(modalElement){
   modalElement.classList.remove("modal_is-opened");
-  document.removeEventListener("keydown", escapeModal)
+  document.removeEventListener("keydown", handleEscape);
 }
 
 function handleProfileFormSubmit(evt){
@@ -82,7 +83,7 @@ function handleAddCardSubmit(evt){
   });
   cardsList.prepend(cardEl);
   evt.target.reset();
-  disableButton(newPostBtn);
+  disableButton(submitButtonSelector, settings);
   closeModal(newPostModal);
   newPostForm.reset();
 }

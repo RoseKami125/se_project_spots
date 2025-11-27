@@ -38,7 +38,7 @@
               alt=""
               class="card__image">
               <button
-               type= "button"
+               type="button"
                aria-label="Delete post"
                class="card__delete-button"></button>
             <div class="card__content">
@@ -63,13 +63,13 @@
         <form class="modal__form" novalidate>
           <label for="profile-name-input" class="modal__label">
             Name
-            <input id="profile-name-input" type="text" class="modal__input" placeholder="Type your name" required min="2" max="40">
+            <input id="profile-name-input" type="text" class="modal__input" placeholder="Type your name" required minlength="2" maxlength="40">
             <span id ="profile-name-input-error" class="modal__error"></span>
           </label>
           <label for="profile-desc-input" class="modal__label">
             Description
             <input id="profile-desc-input" type="text" class="modal__input" placeholder="Describe yourself" required min="2" max="200">
-            <span id ="profile-desk-input-error" class="modal__error"></span>
+            <span id ="profile-desc-input-error" class="modal__error"></span>
           </label>
           <button type="submit" class="modal__submit-button">Save</button>
         </form>
@@ -87,8 +87,8 @@
           </label>
           <label for="card-caption-input" class="modal__label">
             Caption
-            <input id="card-caption-input" type="text" class="modal__input" placeholder="Type your caption" min="2" max="30">
-            <span id ="card-link-input-error" class="modal__error"></span>
+            <input id="card-caption-input" type="text" class="modal__input" placeholder="Type your caption" minlength="2" maxlength="30" required>
+            <span id ="card-caption-input-error" class="modal__error"></span>
           </label>
           <button type="submit" class="modal__submit-button">Save</button>
         </form>
@@ -101,7 +101,7 @@
           class="modal__close-button modal__close-button_preview"
           type="button"
           aria-label="Close button"></button>
-          <img class="modal__image" src="" alt="">
+          <img class="modal__image">
           <p class="modal__caption"></p>
         </div>
   </div>
