@@ -43,11 +43,12 @@
   background-image: url(../images/close-button.png);
   background-color: transparent;
   border: none;
+  opacity: 0.4;
 }
 
 .modal__close-button:hover{
   cursor: pointer;
-  opacity: 0.4;
+  opacity: 1;
 }
 
 .modal__close-button_preview{
@@ -71,11 +72,16 @@
 .modal__input{
   display: block;
   width: 100%;
-  margin: 8px 0 32px;
+  margin: 8px 0;
   padding: 16px 12px;
   border: 1px solid #2121214d;
+  opacity: 0.4;
   border-radius: 8px;
   box-sizing: border-box;
+}
+
+.modal__input:hover{
+  opacity: 1;
 }
 
 .modal__input::placeholder{
@@ -83,6 +89,21 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 1;
+}
+
+.modal__input_type_error{
+  border: 1px solid #FF0000;
+  opacity: 0.6;
+}
+
+.modal__error{
+  display: block;
+  color: #FF0000;
+  opacity: 0.7;
+  margin: 0 0 32px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.1;
 }
 
 .modal__label{
@@ -99,6 +120,10 @@
   color: #fff;
   border-radius: 8px;
   border: none;
+}
+
+.modal__submit-button_type_disabled{
+opacity: 0.5;
 }
 
 .modal__submit-button:hover{
