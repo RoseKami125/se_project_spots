@@ -67,6 +67,14 @@ function handleEscape(evt){
    }
   }
 
+document.querySelectorAll(".modal").forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (evt.target === modal) {
+      closeModal(modal);
+    }
+  });
+});
+
 function openModal(modalElement){
   modalElement.classList.add("modal_is-opened");
   document.addEventListener("keydown", handleEscape);
