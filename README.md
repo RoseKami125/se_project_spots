@@ -23,4 +23,5 @@ This webpage is deployed to GitHub Pages
 **Video**
 
 [Link to video presentation](https://drive.google.com/file/d/1RZRgomk1M6PHrTMrKL2ff8dMEY7DoQjI/view?usp=sharing)
+[Project Pitch Video](https://drive.google.com/file/d/1iv4cmTic-4xJmlpdXKS1quLSZ0l-3NX9/view?usp=sharing)
 
