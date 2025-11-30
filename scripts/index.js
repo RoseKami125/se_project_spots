@@ -1,3 +1,12 @@
+const settings = {
+  formSelector: ".modal__form",
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__submit-button",
+  inactiveButtonClass: "modal__submit-button_type_disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error"
+}
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -83,7 +92,7 @@ function handleAddCardSubmit(evt){
   });
   cardsList.prepend(cardEl);
   evt.target.reset();
-  disableButton(submitButtonSelector, settings);
+  disableButton(evt.target.querySelector(".modal__submit-button"), settings);
   closeModal(newPostModal);
   newPostForm.reset();
 }
@@ -120,7 +129,7 @@ function getCardElement(data){
 editProfileBtn.addEventListener("click", function() {
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescInput.value = profileDescEl.textContent;
-  resetValidation(editProfileForm, [editProfileNameInput,editProfileDescInput ]);
+  resetValidation(editProfileForm, [editProfileNameInput,editProfileDescInput], settings);
   openModal(editProfileModal);
 });
 
@@ -148,3 +157,5 @@ initialCards.forEach(function (item) {
   const cardEl = getCardElement(item);
   cardsList.append(cardEl);
 });
+
+enableValidation(settings);
